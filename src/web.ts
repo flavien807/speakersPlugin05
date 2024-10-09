@@ -7,4 +7,9 @@ export class SpeakerPluginWeb extends WebPlugin implements SpeakerPluginPlugin {
     console.log('ECHO', options);
     return options;
   }
+
+  async setAudioMode(options: { mode: 'speaker' | 'earpiece' }): Promise<{ success: boolean }> {
+    console.log(`setAudioMode called with mode: ${options.mode}`);
+    return { success: true };
+  }
 }
