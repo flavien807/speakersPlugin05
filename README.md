@@ -13,24 +13,24 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`setAudioMode(...)`](#setAudioMode)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### setAudioMode(...)
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+setAudioMode(options: { mode: 'speaker' | 'earpiece' }) => Promise<{ success: boolean; }>
 ```
 
 | Param         | Type                            |
 | ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+| **`options`** | <code>{ mode: 'speaker' | 'earpiece' }</code> |
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Returns:** <code>Promise&lt;{ mode: 'speaker' | 'earpiece' }&gt;</code>
 
 --------------------
 
