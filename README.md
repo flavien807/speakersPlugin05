@@ -1,6 +1,6 @@
 # speakers--mode-plugin
 
-Juste essai
+Plugin pour basculer entre le mode haut-parleur et écouteur.
 
 ## Install
 
