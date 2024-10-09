@@ -45,14 +45,20 @@ public class SpeakerPluginPlugin extends Plugin {
         case "speaker":
           audioManager.setMode(AudioManager.MODE_IN_COMMUNICATION);
           audioManager.setSpeakerphoneOn(true);
+
+          int maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_VOICE_CALL);
           audioManager.setStreamVolume(AudioManager.STREAM_VOICE_CALL, maxVolume, 0);
+
           success = true;
           Log.d("SpeakerPlugin", "Mode set to Speaker");
           break;
         case "earpiece":
           audioManager.setSpeakerphoneOn(false);
           audioManager.setMode(AudioManager.MODE_IN_COMMUNICATION);
-          audioManager.setStreamVolume(AudioManager.STREAM_VOICE_CALL, maxVolume, 0);
+
+          int maxVolumes = audioManager.getStreamMaxVolume(AudioManager.STREAM_VOICE_CALL);
+          audioManager.setStreamVolume(AudioManager.STREAM_VOICE_CALL, maxVolumes, 0);
+
           success = true;
           Log.d("SpeakerPlugin", "Mode set to Earpiece");
           break;
